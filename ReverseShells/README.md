@@ -113,7 +113,23 @@ chmod +w .
 
 
 ## Packaged Code
-![alt text](Compiled.png)
+![alt text](images/Compiled.png)
+
+
+
+
+## Full Test System Vulnerability
+
+- Copy EXE file to the victim machine and execute
+![alt text](images/WinServ.png)
+
+- Use netcat to listen at any connection on the attacker machine and get intrused
+![alt text](images/ShellAccess.png)
+
+The attack was done successfully but some points to improve are:
+- Shell persistence (if the main process that executed the program is killed the shell has gone).
+- Windows Defender detect it as Trojan Script and remove the executable as soon as is detected.
+- Mask the process with the main Windows API as common system process.
 
 
 
