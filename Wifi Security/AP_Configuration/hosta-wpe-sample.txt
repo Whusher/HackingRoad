@@ -1,0 +1,36 @@
+### INITIALIZATION AND COMMON PARAMS ####
+
+interface=wlan0ap	# Change depending of your network interface used as AP (Access Point)
+driver=hostapd		# Always 'hostapd' for Linux
+
+
+# --- Network Identity -----------------------
+ssid=FreeWifi		# Broadcast name (change if require an unique network name)	
+channel=1		# 1 / 6/ 11 forn non-overlaping 2.4GHz
+hw_mode=g		# 'g' = 2.4 GHz  | 'a' = 5 GHz
+country_code=US		# ISO 3166 country code (affects legal channels)
+
+# --- 802.11 Parameters ----------------------
+beacon_interval=100	# ms between beacons (100 = standard)
+dtim_period=2		# Deliver buffered multicast every N beacons
+max_num_sta=255		# Max simultaneous clients
+rts_threshold=2347	# RTS/CTS threshold (2347=off)
+rta_threshold=2346	# Fragmentation threshold
+
+# --- Authentication (OPEN -- no password) ----
+auth_algorithms=1	# 1 = Open System only
+# wpa=		# COMMENTED OUT not WPA
+# wpa_key_mgmt= # Not needed for open network
+# wpa_passphrase= # Not needed for open network
+
+
+#--- Logging ------------------------
+logger_syslog=-1
+logger_syslog_level=2
+logger_file=-1
+logger_file_level=2
+
+
+#--- Debug (uncomment when troubleshooting) ----
+# debug=1
+# verbose_logging=1
